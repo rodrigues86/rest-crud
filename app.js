@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var db = require('./db');
 
-var UserController = require('./user/UserController');
-app.use('/users', UserController);
+var user = require('./router/user');
+app.use('/users', user);
 
 module.exports = app;
